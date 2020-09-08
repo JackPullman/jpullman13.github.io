@@ -2,7 +2,7 @@
 
 ### HTML Assignments
 
-[example.html](/HTML/example.html)
+[example.html](/HTML/example.html)  
 [resume.html](/HTML/resume.html)
 
 ### CSS Assignments
