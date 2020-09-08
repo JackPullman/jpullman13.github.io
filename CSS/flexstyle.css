@@ -1,0 +1,28 @@
+.skills-wrapper {
+    font-size: 14pt;
+    font-family: 'Times New Roman', Times, serif;
+    flex-grow: 1;
+    padding: 0 0 0 8px;
+}
+
+#skills-header {
+    background-color: orangered;
+    flex: 0 0 100%;
+}
+
+#programming-languages {
+    border: 3px solid blue;
+    background-color: darkorchid;
+    color: darkturquoise;
+}
+
+#computer-skills {
+    border: 3px solid greenyellow;
+    background-color: indigo;
+    color: lightgreen;
+}
+
+#skills {
+    display: flex;
+    flex-wrap: wrap;
+}
