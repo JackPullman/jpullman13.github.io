@@ -2,12 +2,12 @@
 
 ### HTML Assignments
 
-[example.html](/HTML/example)  
-[resume.html](/HTML/resume)
+Example HTML File: [example.html](/HTML/example)  
+Resume HTML Project: [resume.html](/HTML/resume)
 
 ### CSS Assignments
 
-[cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)
+Cascading Exercise: [cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)
 
 <!-- ## Welcome to GitHub Pages
 
