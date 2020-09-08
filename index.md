@@ -1,8 +1,4 @@
-{% for file in site.static_files %}
-{% if file.extname == ".md" %}
-[{{ file.basename }}]({{site.baseurl}}/HTML/{{file.basename}}.html)
-{% endif %}
-{% endfor %}
+* TOC {:toc}
 
 ## Welcome to GitHub Pages
 
