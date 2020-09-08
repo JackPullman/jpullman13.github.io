@@ -1,6 +1,15 @@
-{:toc}
+## CS 3744 Intro to GUI Assignments
 
-## Welcome to GitHub Pages
+### HTML Assignments
+
+[example.html](/HTML/example.html)
+[resume.html](/HTML/resume.html)
+
+### CSS Assignments
+
+[cascading_exercise.html](/CSS/cascading_exercise.html)
+
+<!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/jpullman13/jpullman13.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
 
@@ -36,4 +45,4 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 
 ### Support or Contact
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out. -->
