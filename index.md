@@ -7,7 +7,7 @@
 
 ### CSS Assignments
 
-[cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [floatstyle.css](/CSS/floatstyle.css)
+[cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)
 
 <!-- ## Welcome to GitHub Pages
 
