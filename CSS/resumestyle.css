@@ -42,7 +42,7 @@ header a {
     flex-direction: row;
     flex-wrap: wrap;
     align-content: stretch;
-    align-items: center;
+    align-items: stretch;
 }
 
 #profile-photo {
@@ -55,6 +55,7 @@ header a {
 
 #profile-photo img {
     width: 100%;
+    max-width: 800px;
     height: auto;
     border-radius: 10px;
 }
