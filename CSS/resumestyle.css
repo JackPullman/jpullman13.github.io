@@ -50,6 +50,7 @@ header a {
     width: 15%;
     height: auto;
     flex-grow: 1;
+    margin-right: 1%;
 }
 
 #profile-photo img {
@@ -62,7 +63,7 @@ header a {
     border-radius: 20px;
     border: 1px solid black;
     padding: 0 0 0 1%;
-    margin: 1%;
+    margin: 1% 0 1% 0;
     flex-grow: 5;
     background-color: rgb(185, 144, 219);
 }
