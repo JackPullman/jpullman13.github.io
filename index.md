@@ -8,6 +8,7 @@ Resume HTML Project: [resume.html](/HTML/resume)
 ### CSS Assignments
 
 Cascading Exercise: [cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)
+Resume CSS Project: [resume.html](/CSS/resume) - [resumestyle.css](/CSS/resumestyle.css)
 
 <!-- ## Welcome to GitHub Pages
 

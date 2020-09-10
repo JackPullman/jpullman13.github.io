@@ -1,0 +1,76 @@
+html, body {
+    background-color: rgb(199, 177, 218);
+}
+
+header {
+    background-color: rgb(185, 144, 219);
+    border-radius: 20px;
+    padding: 2%;
+    border: 1px solid black;
+    position: sticky;
+    top: 0;
+    width: 95%;
+}
+
+header h1 {
+    font-size: xx-large;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header nav {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+header a {
+    flex-grow: 1;
+    border: 1px solid black;
+    border-radius: 6px;
+    margin: 0.25%;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    background-color: rgb(157, 88, 214);
+    color: white;
+}
+
+#contact-box {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: stretch;
+}
+
+#profile-photo {
+    display: block;
+    padding-top: 1%;
+    width: 25%;
+    height: 25%;
+    flex-grow: 1;
+    border-radius: 10%;
+}
+
+.resume-section {
+    border-radius: 20px;
+    border: 1px solid black;
+    padding: 0 0 0 1%;
+    margin: 1%;
+    flex-grow: 3;
+    background-color: rgb(185, 144, 219);
+}
+
+.resume-section h2 {
+    text-align: center;
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-weight: bold;
+}
+
+.resume-section h3 {
+    text-align: left;
+    font-family: 'Verdana', 'Geneva', sans-serif;
+    font-weight: bold;
+    text-decoration-line: underline;
+}
