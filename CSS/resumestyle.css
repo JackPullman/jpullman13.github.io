@@ -47,8 +47,9 @@ header a {
 
 #profile-photo {
     display: block;
-    width: 25%;
+    width: 15%;
     height: auto;
+    flex-grow: 1;
 }
 
 #profile-photo img {
@@ -62,7 +63,7 @@ header a {
     border: 1px solid black;
     padding: 0 0 0 1%;
     margin: 1%;
-    flex-grow: 1;
+    flex-grow: 5;
     background-color: rgb(185, 144, 219);
 }
 
