@@ -37,20 +37,24 @@ header a {
 }
 
 #contact-box {
+    padding-top: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
     align-content: stretch;
+    align-items: center;
 }
 
 #profile-photo {
     display: block;
-    padding-top: 1%;
     width: 25%;
     height: auto;
-    flex-grow: 1;
-    border-radius: 10%;
+}
+
+#profile-photo img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
 }
 
 .resume-section {
@@ -58,7 +62,7 @@ header a {
     border: 1px solid black;
     padding: 0 0 0 1%;
     margin: 1%;
-    flex-grow: 3;
+    flex-grow: 1;
     background-color: rgb(185, 144, 219);
 }
 
