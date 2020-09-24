@@ -35,6 +35,7 @@ header a {
     box-sizing: border-box;
     color: white;
     flex-grow: 1;
+    font-weight: 500;
     margin: 0.25%;
     min-width: 19.5%;
     padding: 8px;
