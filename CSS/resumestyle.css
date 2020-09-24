@@ -42,24 +42,6 @@ header a {
     text-decoration: none;
 }
 
-#content-gutter {
-    margin: 0 auto;
-    max-width: 1200px;
-    padding: 0 1%;
-}
-
-#top-section-wrapper {
-    align-content: center;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-}
-
-#top-section-wrapper .resume-section {
-    flex-basis: 10%;
-    flex-grow: 2;
-}
-
 img {
     align-self: center;
     border-radius: 10px;
@@ -68,6 +50,13 @@ img {
     height: auto;
     margin: 0.5%;
     width: 20%;
+}
+
+.anchor {
+    display: block;
+    height: 175px;
+    margin-top: -175px;
+    visibility: hidden;
 }
 
 .resume-section {
@@ -91,9 +80,20 @@ img {
     text-decoration-line: underline;
 }
 
-.anchor {
-    display: block;
-    height: 175px;
-    margin-top: -175px;
-    visibility: hidden;
+#content-gutter {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1%;
+}
+
+#top-section-wrapper {
+    align-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#top-section-wrapper .resume-section {
+    flex-basis: 10%;
+    flex-grow: 2;
 }
