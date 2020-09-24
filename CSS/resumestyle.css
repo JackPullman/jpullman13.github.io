@@ -4,12 +4,11 @@ html, body {
 
 header {
     background-color: rgb(185, 144, 219);
-    border-radius: 20px;
+    border-radius: 10px;
     padding: 2%;
     border: 1px solid black;
     position: sticky;
     top: 0;
-    width: 95%;
 }
 
 header h1 {
@@ -28,10 +27,9 @@ header a {
     flex-grow: 1;
     min-width: 19.5%;
     border: 1px solid black;
-    border-radius: 6px;
+    border-radius: 4px;
     margin: 0.25%;
     text-align: center;
-    color: black;
     text-decoration: none;
     background-color: rgb(157, 88, 214);
     color: white;
@@ -39,33 +37,26 @@ header a {
 }
 
 #top-section-wrapper {
-    padding: 1%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-content: center;
-    align-items: flex-start;
 }
 
-#profile-photo {
-    display: block;
-    width: 15%;
-    height: auto;
+#top-section-wrapper .resume-section {
     flex-grow: 1;
-    flex-shrink: 0;
-    margin: 0.5%;
-    align-self: center;
 }
 
-#profile-photo img {
-    width: 100%;
-    max-width: 800px;
-    height: auto;
+img {
+    margin: 0.5%;
+    max-height: 20vh;
+    max-width: 20vh;
     border-radius: 10px;
+    width: 100%;
 }
 
 .resume-section {
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid black;
     padding: 0 0 0 1%;
     margin: 0.5%;
