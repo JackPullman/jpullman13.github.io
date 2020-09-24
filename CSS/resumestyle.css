@@ -1,11 +1,11 @@
-html, body {
+html, body { /* this affects everything in the document */
     background-color: rgb(199, 177, 218);
     font-family: 'Ubuntu', sans-serif;
     margin: 0;
     padding: 0;
 }
 
-header {
+header { /* this affects everything in the document header */
     background-color: rgb(80, 37, 116);
     border-bottom: 1px solid black;
     padding: 2px 2% 5px 2%;
@@ -13,7 +13,7 @@ header {
     top: 0;
 }
 
-header h1 {
+header h1 { /* this h1 elements inside the document header */
     color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: xx-large;
@@ -22,13 +22,13 @@ header h1 {
     text-align: center;
 }
 
-header nav {
+header nav { /* this affects nav elements inside the document header */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-header a {
+header a { /* this affects link elements in the document header */
     background-color: rgb(157, 88, 214);
     border: 1px solid black;
     border-radius: 4px;
@@ -43,7 +43,7 @@ header a {
     text-decoration: none;
 }
 
-img {
+img { /* this affects image elements across the entire document */
     align-self: center;
     border-radius: 10px;
     height: 80px;
@@ -51,14 +51,14 @@ img {
     width: 80px;
 }
 
-.anchor {
+.anchor { /* this affects elements with the anchor class */
     display: block;
     height: 175px;
     margin-top: -175px;
     visibility: hidden;
 }
 
-.resume-section {
+.resume-section { /* this affects elements with the resume-section class */
     background-color: rgb(185, 144, 219);
     border-radius: 10px;
     border: 1px solid black;
@@ -68,36 +68,36 @@ img {
     padding: 1% 5%;
 }
 
-.resume-section h2 {
+.resume-section h2 { /* this affects h2 elements inside elements with the resume-section class */
     font-weight: bold;
     text-align: center;
 }
 
-.resume-section h3 {
+.resume-section h3 { /* this affects h3 elements inside elements with the resume-section class */
     font-weight: bold;
     text-align: left;
     text-decoration-line: underline;
 }
 
-#content-gutter {
+#content-gutter { /* this affects elements with the id content-gutter */
     margin: 0 auto;
     max-width: 1200px;
     padding: 0 1%;
 }
 
-#header-title {
+#header-title { /* this affects elements with the id header-title */
     display: flex;
     align-items: center;
 }
 
-#top-section-wrapper {
+#top-section-wrapper { /* this affects elements with the id top-section-wrapper */
     align-content: center;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 }
 
-#top-section-wrapper .resume-section {
+#top-section-wrapper .resume-section /* this affects elements with the resume-section class inside elements with the id content-gutter */{
     flex-basis: 10%;
     flex-grow: 1;
 }
