@@ -14,6 +14,8 @@ Resume CSS Project: [resume.html](/CSS/resume) - [resumestyle.css](/CSS/resumest
 
 ChangingContent Exercise: [ChangingContent.html](/JavaScript/ChangingContent/ChangingContent) - [myscripts.js](/JavaScript/ChangingContent/myscripts.js)
 
+ChangingStyles Exercise: [ChangingContent.html](/JavaScript/ChangingStyles/ChangingContent) - [changing-styles.css](/JavaScript/ChangingStyles/changing-styles.css) - [myscripts.js](/JavaScript/ChangingStyles/myscripts.js)
+
 <!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/jpullman13/jpullman13.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
