@@ -3,17 +3,18 @@
 ### HTML Assignments
 
 Example HTML File: [example.html](/HTML/example)  
-Resume HTML Project: [resume.html](/HTML/resume)  
+Plain ol' HTML Resume Project: [resume.html](/HTML/Plain ol' HTML Resume Project/resume)  
 
 ### CSS Assignments
 
-Cascading Exercise: [cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)  
-Resume CSS Project: [resume.html](/CSS/resume) - [resumestyle.css](/CSS/resumestyle.css)
+Cascading Exercise: [cascading_exercise.html](/CSS/Cascading Exercise/cascading_exercise) - [style.css](/CSS/Cascading Exercise/style.css) - [flexstyle.css](/CSS/Cascading Exercise/flexstyle.css)  
+Stylish Resume Project: [resume.html](/CSS/Stylish Resume Project/resume) - [resumestyle.css](/CSS/Stylish Resume Project/resumestyle.css)
 
 ### JavaScript Assignments
 
 ChangingContent Exercise: [ChangingContent.html](/JavaScript/ChangingContent/ChangingContent) - [myscripts.js](/JavaScript/ChangingContent/myscripts.js)  
-ChangingStyles Exercise: [ChangingContent.html](/JavaScript/ChangingStyles/ChangingContent) - [changing-styles.css](/JavaScript/ChangingStyles/changing-styles.css) - [myscripts.js](/JavaScript/ChangingStyles/myscripts.js)
+ChangingStyles Exercise: [ChangingContent.html](/JavaScript/ChangingStyles/ChangingContent) - [changing-styles.css](/JavaScript/ChangingStyles/changing-styles.css) - [myscripts.js](/JavaScript/ChangingStyles/myscripts.js)  
+To-Do List Project: [index.html](/JavaScript/To-Do List Project/index) - [index.js](/JavaScript/To-Do List Project/index.js)
 
 <!-- ## Welcome to GitHub Pages
 
