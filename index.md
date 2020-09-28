@@ -12,7 +12,7 @@ Resume CSS Project: [resume.html](/CSS/resume) - [resumestyle.css](/CSS/resumest
 
 ### JavaScript Assignments
 
-ChangingContent Exercise: [ChangingContent.html](/JavaScript/ChangingContent/ChangingContent) - [myscripts.js](/JavaScript/ChangingContent/myscripts.js)
+ChangingContent Exercise: [ChangingContent.html](/JavaScript/ChangingContent/ChangingContent) - [myscripts.js](/JavaScript/ChangingContent/myscripts.js)  
 ChangingStyles Exercise: [ChangingContent.html](/JavaScript/ChangingStyles/ChangingContent) - [changing-styles.css](/JavaScript/ChangingStyles/changing-styles.css) - [myscripts.js](/JavaScript/ChangingStyles/myscripts.js)
 
 <!-- ## Welcome to GitHub Pages
