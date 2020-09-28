@@ -10,6 +10,10 @@ Resume HTML Project: [resume.html](/HTML/resume)
 Cascading Exercise: [cascading_exercise.html](/CSS/cascading_exercise) - [style.css](/CSS/style.css) - [flexstyle.css](/CSS/flexstyle.css)  
 Resume CSS Project: [resume.html](/CSS/resume) - [resumestyle.css](/CSS/resumestyle.css)
 
+### JavaScript Assignments
+
+ChangingContent Exercise: [ChangingContent.html](/JavaScript/ChangingContent) - [myscripts.js](/JavaScript/myscripts.js)
+
 <!-- ## Welcome to GitHub Pages
 
 You can use the [editor on GitHub](https://github.com/jpullman13/jpullman13.github.io/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
