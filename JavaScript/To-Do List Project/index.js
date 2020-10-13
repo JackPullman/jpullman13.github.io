@@ -43,11 +43,22 @@ let tasks = [
 ];
 
 function taskToRow(task) {
-  let taskClass = "danger"; // TODO: make this dynamic
+  let taskClass = "";
+  switch(true) {
+    case !task.completed && (task.dueDate < Date.now()):
+      taskClass = "danger";
+      break;
+    case task.completed:
+      taskClass = "success";
+      break;
+    default:
+      taskClass = "";
+  }
+  let taskTitle = task.title.length <= 30 ? task.title : `${task.title.substr(0,30)}...`;
   return `
   <tr id="${task.id}" class="${taskClass}">
-    <td class="text-center"><input type="checkbox" class="form-check-input" value="0"></td>
-    <td class="text-center">${task.title}</td>
+    <td class="text-center"><input type="checkbox" class="form-check-input" value="${task.id}"></td>
+    <td class="text-center">${taskTitle}</td>
     <td class="text-center">
       <span class="text-right">
         <button class="btn btn-xs btn-warning" data-toggle="collapse" data-target="#note-${task.id}">
@@ -80,8 +91,17 @@ function taskToRow(task) {
   `
 }
 
+function renderAllTasks() {
+  let renderedTasks = "";
+  tasks.forEach(task => {
+    if (!task.deleted) {
+      renderedTasks += taskToRow(task);
+    }
+  });
+  $("#tasks").find("tbody").html(renderedTasks);
+}
+
 // Main Code
 $(document).ready(function() {
-  $("#tasks").find("tbody").html(taskToRow(tasks[0]));
-  // loop through tasks, convert, and append them
+  renderAllTasks();
 });
