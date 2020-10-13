@@ -41,3 +41,47 @@ let tasks = [
     note:"I would have to book a flight ticket to ACM CHI conference.\r\nKeep an eye on the cancellation policy. the conference may be cancelled due to the cornoa virus outbreak. :( Although flight tickets are getting cheaper."
   }
 ];
+
+function taskToRow(task) {
+  let taskClass = "danger"; // TODO: make this dynamic
+  return `
+  <tr id="${task.id}" class="${taskClass}">
+    <td class="text-center"><input type="checkbox" class="form-check-input" value="0"></td>
+    <td class="text-center">${task.title}</td>
+    <td class="text-center">
+      <span class="text-right">
+        <button class="btn btn-xs btn-warning" data-toggle="collapse" data-target="#note-${task.id}">
+          <span class="glyphicon glyphicon-triangle-bottom"></span>Note
+        </button>
+      </span>
+    </td>
+    <td class="text-center">${task.dueDate}</td> 
+    <td class="text-center">${task.completeDate}</td>
+    <td class="text-center">
+      <button type="button" class="btn btn-danger btn-xs deletetask" alt="Delete the task" value="0">
+        <span class="glyphicon glyphicon-trash"></span>
+      </button>
+      <a target="_blank" href="mailto:?body=${task.note}&amp;subject=${task.title}">
+        <button type="button" class="btn btn-danger btn-xs emailtask" alt="Send an email" value="0">
+          <span class="glyphicon glyphicon-envelope"></span>
+        </button>
+      </a>
+    </td>
+  </tr>
+  <tr id="note-${task.id}" class="collapse">
+    <td></td>
+    <td colspan="5">
+      <div class="well">
+          <h3>${task.title}</h3>
+          <div>${task.note}</div>
+      </div>
+    </td>
+  </tr>
+  `
+}
+
+// Main Code
+$(document).ready(function() {
+  $("#tasks").find("tbody").html("hello");
+  // loop through tasks, convert, and append them
+});
