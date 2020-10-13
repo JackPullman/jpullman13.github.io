@@ -82,6 +82,6 @@ function taskToRow(task) {
 
 // Main Code
 $(document).ready(function() {
-  $("#tasks").find("tbody").html("hello");
+  $("#tasks").find("tbody").html(taskToRow(tasks[0]));
   // loop through tasks, convert, and append them
 });
