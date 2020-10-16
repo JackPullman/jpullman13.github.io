@@ -200,7 +200,6 @@ $(document).ready(function() {
     });
     $("#newtask").trigger("reset");
     $("#myModal").modal("hide");
-    console.log(tasks);
     renderAllTasks();
   });
 
