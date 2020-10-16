@@ -1,3 +1,5 @@
+let showOverdue = false;
+let hideIncomplete = false;
 
 let tasks = [
   {
@@ -42,22 +44,36 @@ let tasks = [
   }
 ];
 
+function getFormattedDate(date) {
+  if (!(date instanceof Date)) {
+    return "";
+  }
+  let year = date.getFullYear();
+  let month = (1 + date.getMonth()).toString().padStart(2, '0');
+  let day = date.getDate().toString().padStart(2, '0');
+  
+  return `${month}/${day}/${year}`;
+}
+
 function taskToRow(task) {
   let taskClass = "";
+  let checked = "";
   switch(true) {
-    case !task.completed && (task.dueDate < Date.now()):
+    case !task.completed && task.dueDate && (task.dueDate < Date.now()):
       taskClass = "danger";
       break;
     case task.completed:
       taskClass = "success";
+      checked = "checked";
       break;
     default:
       taskClass = "";
   }
   let taskTitle = task.title.length <= 30 ? task.title : `${task.title.substr(0,30)}...`;
+  taskTitle = task.completed ? `<del>${taskTitle}</del>` : taskTitle;
   return `
   <tr id="${task.id}" class="${taskClass}">
-    <td class="text-center"><input type="checkbox" class="form-check-input" value="${task.id}"></td>
+    <td class="text-center"><input type="checkbox" class="form-check-input" value="${task.id}" ${checked}></td>
     <td class="text-center">${taskTitle}</td>
     <td class="text-center">
       <span class="text-right">
@@ -66,14 +82,14 @@ function taskToRow(task) {
         </button>
       </span>
     </td>
-    <td class="text-center">${task.dueDate}</td> 
-    <td class="text-center">${task.completeDate}</td>
+    <td class="text-center">${getFormattedDate(task.dueDate)}</td> 
+    <td class="text-center">${getFormattedDate(task.completeDate)}</td>
     <td class="text-center">
-      <button type="button" class="btn btn-danger btn-xs deletetask" alt="Delete the task" value="0">
+      <button type="button" class="btn btn-danger btn-xs deletetask" alt="Delete the task" value="${task.id}">
         <span class="glyphicon glyphicon-trash"></span>
       </button>
       <a target="_blank" href="mailto:?body=${task.note}&amp;subject=${task.title}">
-        <button type="button" class="btn btn-danger btn-xs emailtask" alt="Send an email" value="0">
+        <button type="button" class="btn btn-danger btn-xs emailtask" alt="Send an email" value="${task.id}">
           <span class="glyphicon glyphicon-envelope"></span>
         </button>
       </a>
@@ -93,15 +109,102 @@ function taskToRow(task) {
 
 function renderAllTasks() {
   let renderedTasks = "";
-  tasks.forEach(task => {
-    if (!task.deleted) {
-      renderedTasks += taskToRow(task);
-    }
+  let filteredTasks = tasks.filter(task => !task.deleted);
+  switch(true) {
+    case showOverdue:
+      filteredTasks = filteredTasks.filter(task => ((task.dueDate < Date.now()) && !task.completed));
+      break;
+    case hideIncomplete:
+      filteredTasks = filteredTasks.filter(task => !task.completed);
+      break;
+  }
+  filteredTasks.forEach(task => {
+    renderedTasks += taskToRow(task);
   });
+  renderedTasks.replace(/<br\s?\/?>/g,"\n"); // https://stackoverflow.com/questions/5999792/new-line-in-textarea-to-be-converted-to-br
   $("#tasks").find("tbody").html(renderedTasks);
+  let completeCheck = filteredTasks.filter(checkTask => (checkTask.completed && !checkTask.deleted));
+  $("#deleteCompletedTasks").attr("disabled", completeCheck.length == 0);
 }
 
 // Main Code
 $(document).ready(function() {
   renderAllTasks();
+
+  $(document).on("click", ".deletetask", function() {
+    const toDelete = $(this).attr("value");
+    if (confirm("Are you sure?")) {
+      tasks.find(task => task.id == toDelete).deleted = true;
+      renderAllTasks();
+    }
+  });
+
+  $(document).on("click", ".form-check-input", function() {
+    const toComplete = $(this).attr("value");
+    const completedTask = tasks.find(task => task.id == toComplete);
+    completedTask.completed = !completedTask.completed;
+    completedTask.completeDate = completedTask.completed ? new Date() : null;
+    renderAllTasks();
+  });
+
+  $("#overdue a").on("click", function() {
+    $("#overdue").toggleClass("active");
+    showOverdue = !showOverdue;
+    renderAllTasks();
+  });
+
+  $("#hidecompleted a").on("click", function() {
+    $("#hidecompleted").toggleClass("active");
+    hideIncomplete = !hideIncomplete;
+    renderAllTasks();
+  });
+
+  $(document).on("click", "#deleteCompletedTasks", function() {
+    let completedTasks = tasks.filter(task => task.completed && !task.deleted);
+    let confirmMsg = completedTasks.length < 2 ? "task" : "tasks";
+    if (confirm(`Do you want to delete ${completedTasks.length} ${confirmMsg}?`)) {
+      completedTasks.forEach(completedTask => {
+        tasks.find(task => task.id == completedTask.id).deleted = true;
+      });
+      renderAllTasks();
+    }
+  });
+
+  $(".addtask").on("click", function() {
+    $("#myModal").modal();
+  });
+
+  $("#newtask").on("submit", function(event) {
+    event.preventDefault();
+    
+    const newTaskTitle = $("#task-title").val();
+    if (!newTaskTitle) {
+      alert("Task title is required");
+      return;
+    }
+    const dateValue = $("#due-date").val();
+    const newTaskDate = dateValue ? new Date(dateValue) : null;
+    if (dateValue && isNaN(Date.parse(dateValue))) {
+      alert("Check your date format.");
+      return;
+    }
+    tasks.push({
+      id: tasks[tasks.length - 1].id + 1,
+      title: newTaskTitle,
+      dueDate: newTaskDate,
+      completed: false,
+      completeDate: null,
+      createdDate: new Date(),
+      deleted: false,
+      note: $("#task-note").val()
+    });
+    $("#newtask").trigger("reset");
+    $("#myModal").modal("hide");
+    console.log(tasks);
+    renderAllTasks();
+  });
+
+  $('#myModal').on('hidden.bs.modal', function() {
+    $("#newtask").trigger("reset");
+  });
 });
